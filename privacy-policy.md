@@ -1,6 +1,6 @@
 # Privacy Policy for Qwale
 
-Last Updated: July 11, 2026
+Last Updated: July 15, 2026
 
 ## Introduction
 
@@ -69,4 +69,4 @@ This Privacy Policy may be updated from time to time. Continued use of Qwale aft
 
 ## Contact
 
-For privacy-related questions or requests, users may contact the Qwale development team by sending a message to @va_. on Discord.
+For privacy-related questions or requests, please contact the Qwale support server.
