@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Astral</title>
+<style>
+  :root{
+    --bg: #14151b;
+    --panel: #1b1d26;
+    --panel-border: #2a2d3a;
+    --text: #d9dbe6;
+    --text-dim: #8e91a8;
+    --accent: #5865F2;
+    --accent-soft: rgba(88,101,242,0.14);
+    --serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --sans: "Segoe UI", "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.65;
+    font-size:16px;
+  }
+
+  .layout{
+    display:grid;
+    grid-template-columns:260px minmax(0,760px);
+    justify-content:center;
+    gap:56px;
+    max-width:1180px;
+    margin:0 auto;
+    padding:64px 24px 120px;
+  }
+
+  nav.toc{
+    position:sticky;
+    top:48px;
+    align-self:start;
+    font-size:13.5px;
+  }
+
+  .bot-mark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:28px;
+  }
+  .bot-mark .dot{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 4px var(--accent-soft);
+  }
+  .bot-mark span{
+    font-family:var(--serif);
+    font-size:19px;
+    letter-spacing:0.02em;
+    color:#fff;
+  }
+
+  nav.toc .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--text-dim);
+    font-size:11px;
+    margin-bottom:12px;
+  }
+
+  nav.toc ol{
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-left:1px solid var(--panel-border);
+  }
+  nav.toc li{margin:0;}
+  nav.toc a{
+    display:block;
+    padding:7px 0 7px 16px;
+    margin-left:-1px;
+    border-left:1px solid transparent;
+    color:var(--text-dim);
+    text-decoration:none;
+    transition:color .15s, border-color .15s;
+  }
+  nav.toc a:hover, nav.toc a:focus-visible{
+    color:var(--text);
+    border-left-color:var(--accent);
+    outline:none;
+  }
+
+  .switch-doc{
+    margin-top:32px;
+    padding-top:20px;
+    border-top:1px solid var(--panel-border);
+  }
+  .switch-doc a{
+    color:var(--accent);
+    text-decoration:none;
+    font-size:13.5px;
+  }
+  .switch-doc a:hover{text-decoration:underline;}
+
+  main{min-width:0;}
+
+  header.doc-head{
+    margin-bottom:48px;
+  }
+  header.doc-head .kicker{
+    color:var(--accent);
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+  }
+  h1{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:42px;
+    line-height:1.15;
+    margin:0 0 16px;
+    color:#fff;
+  }
+  .updated{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--text-dim);
+    font-size:13.5px;
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+  .updated .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+
+  section{
+    margin-bottom:40px;
+    scroll-margin-top:40px;
+  }
+  section h2{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:23px;
+    color:#fff;
+    margin:0 0 14px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--panel-border);
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+  }
+  section h2 .num{
+    color:var(--accent);
+    font-family:var(--sans);
+    font-size:14px;
+    font-weight:600;
+  }
+
+  p{margin:0 0 14px; color:var(--text);}
+  ul{margin:0 0 14px; padding-left:22px;}
+  li{margin-bottom:6px;}
+
+  strong{color:#fff; font-weight:600;}
+
+  .callout{
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-left:3px solid var(--accent);
+    border-radius:6px;
+    padding:16px 20px;
+    margin:0 0 14px;
+    font-size:14.5px;
+    color:var(--text-dim);
+  }
+  .callout strong{color:var(--text);}
+
+  .data-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:0 0 14px;
+  }
+  .data-grid .item{
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    border-radius:6px;
+    padding:10px 14px;
+    font-size:14px;
+    color:var(--text);
+  }
+
+  footer.doc-foot{
+    margin-top:64px;
+    padding-top:24px;
+    border-top:1px solid var(--panel-border);
+    color:var(--text-dim);
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  footer.doc-foot a{color:var(--accent); text-decoration:none;}
+  footer.doc-foot a:hover{text-decoration:underline;}
+  .back-top{
+    color:var(--text-dim);
+    text-decoration:none;
+    font-size:13px;
+    border:1px solid var(--panel-border);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+  .back-top:hover{color:var(--text); border-color:var(--accent);}
+
+  @media (max-width: 880px){
+    .layout{grid-template-columns:1fr; padding:32px 20px 80px;}
+    nav.toc{position:static; margin-bottom:36px; border-bottom:1px solid var(--panel-border); padding-bottom:24px;}
+    nav.toc ol{columns:2; column-gap:20px; border-left:none;}
+    nav.toc a{padding:5px 0; border-left:none;}
+    h1{font-size:32px;}
+    .data-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="bot-mark"><span class="dot"></span><span>Astral</span></div>
+    <div class="eyebrow">On this page</div>
+    <ol>
+      <li><a href="#s1">Introduction</a></li>
+      <li><a href="#s2">Information We Collect</a></li>
+      <li><a href="#s3">How We Use Information</a></li>
+      <li><a href="#s4">Data Storage</a></li>
+      <li><a href="#s5">Data Deletion</a></li>
+      <li><a href="#s6">Data Sharing</a></li>
+      <li><a href="#s7">User Rights</a></li>
+      <li><a href="#s8">Changes to This Policy</a></li>
+      <li><a href="#s9">Contact</a></li>
+    </ol>
+    <div class="switch-doc">
+      <a href="terms-of-service.html">→ View the Terms of Service</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="doc-head">
+      <div class="kicker">Legal · Astral</div>
+      <h1>Privacy Policy</h1>
+      <div class="updated"><span class="dot"></span>Last updated July 15, 2026</div>
+    </header>
+
+    <section id="s1">
+      <h2>Introduction</h2>
+      <p>Astral is a Discord bot that provides moderation and auto-moderation tools, mod case logging, autoresponders, role management, welcome messages, community features, entertainment commands, and economy and utility functionality.</p>
+      <p>This Privacy Policy explains what information Astral collects, how it is used, and what rights users have regarding their data.</p>
+    </section>
+
+    <section id="s2">
+      <h2>Information We Collect</h2>
+      <p>Astral may collect and store the following information:</p>
+      <div class="data-grid">
+        <div class="item">Discord User IDs</div>
+        <div class="item">Discord Server IDs</div>
+        <div class="item">Discord Channel IDs</div>
+        <div class="item">Moderation case records (warnings, mutes, bans, kicks)</div>
+        <div class="item">Economy-related user data required for bot functionality</div>
+        <div class="item">Server configuration data (automod, autoresponders, roles, welcome messages, and other settings)</div>
+      </div>
+    </section>
+
+    <section id="s3">
+      <h2>How We Use Information</h2>
+      <p>Collected information is used solely to:</p>
+      <ul>
+        <li>Provide moderation and auto-moderation features, including maintaining case records</li>
+        <li>Operate economy-related systems</li>
+        <li>Process commands and bot functionality, including autoresponders, roles, welcome messages, and utility and fun commands</li>
+        <li>Improve reliability and performance of the service</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2>Data Storage</h2>
+      <p>Data is stored only for as long as necessary to provide the bot's features and services.</p>
+      <p>Reasonable security measures are implemented to protect stored information from unauthorized access.</p>
+    </section>
+
+    <section id="s5">
+      <h2>Data Deletion</h2>
+      <p>Users may permanently delete their stored data at any time using the bot's data deletion command.</p>
+      <p>When a deletion request is made, all associated stored user data is removed from Astral's systems.</p>
+    </section>
+
+    <section id="s6">
+      <h2>Data Sharing</h2>
+      <p>Astral does not sell user data.</p>
+      <p>Data is only shared with third-party service providers when necessary to provide functionality.</p>
+    </section>
+
+    <section id="s7">
+      <h2>User Rights</h2>
+      <p>Users may:</p>
+      <ul>
+        <li>Request deletion of their data</li>
+        <li>Remove the bot from servers they manage</li>
+      </ul>
+    </section>
+
+    <section id="s8">
+      <h2>Changes to This Policy</h2>
+      <p>This Privacy Policy may be updated from time to time. Continued use of Astral after changes are published constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section id="s9">
+      <h2>Contact</h2>
+      <p>For privacy-related questions or requests, please contact the Astral support server.</p>
+    </section>
+
+    <footer class="doc-foot">
+      <span>Astral · Privacy Policy</span>
+      <a href="#top" class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to top ↑</a>
+    </footer>
+  </main>
+
+</div>
+</body>
+</html>
